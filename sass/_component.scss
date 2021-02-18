@@ -1,0 +1,755 @@
+
+
+//////////////////////////////////////////@
+////////////////navbar
+.nav{
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    color: #ffffff;
+    //position: absolute;
+    z-index: 50;
+    background-color: transparent;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    @include responed(small-tablet){
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        height: auto;
+        
+        
+       
+        
+        padding-top: 0;
+    }
+  
+    &__logo h1{
+        font-size: 2rem;
+        font-weight: 700;
+  
+    }
+    &__logo{
+       margin-left: 5rem;
+        order: 0;
+        @include responed(small-tablet){
+            padding: 2rem;
+            background-color: #000000;
+            order: 0;
+            width: 100%;
+            margin-right: 0;
+            text-align: start;
+            height: 100%;
+            
+        }
+    }
+    &__items{
+        display: flex;
+        list-style: none;
+        margin-right: 5rem;
+        
+        align-items: flex-start;
+        font-size: 2rem;
+      
+        @include responed(small-tablet){
+            align-items: flex-end;
+            flex-direction: column;
+           // justify-content: flex-end;
+            display: none;
+            width: 20rem;
+            background-color: #3d59a7;
+            box-shadow: 1rem 1rem 1rem rgba(#000000,0.2);
+            
+           
+  
+        }
+       
+        
+      
+        
+        order: 1;
+  
+    }
+    &__item{
+          
+      padding-left: 4rem;
+      font-weight: 500;
+      @include responed(small-tablet){
+          
+         
+         margin-top: 1rem;
+  
+         padding: 0;
+        
+         color: #ffffff;
+         padding-right: 2rem;
+         margin-bottom: 1.5rem;
+        
+         
+         
+            
+          }
+        }
+  
+  
+  &__link:link,
+  &__link:visited{
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      text-decoration: none;
+      color:#ffffff ;
+      opacity: 70%;
+      @include responed(phone){
+          opacity: 100%;
+          font-size: 2.5rem;
+          
+      }
+      
+  }
+  &__link:hover,
+  &__link:active{
+      opacity: 100%;
+  }   
+      /////////////////////////navigation for phone
+    &__icon{
+          display: none;
+          @include responed(small-tablet){
+              display: flex;
+              width:4rem;
+              height: 4rem;
+              background-color: #ffffff;
+              border-radius: 10rem;
+              
+              box-shadow: .5rem 1rem 1rem rgba(#000000,0.3) ;
+              justify-content: center;
+              align-items: center;
+              order: -1;
+              
+              position: fixed;
+              margin-bottom: 2rem;
+              top: 1.5rem;
+              right: 3rem;
+              border: none;
+              &:focus{
+                  outline: none;
+              }
+              &:active{
+                  transform: translateY(2px);
+              }
+   
+      }
+          
+          
+      }
+      
+      &__hum{
+          width: 2.5rem;
+          height: 2.5rem;
+          
+         
+  
+      }
+      &__world{
+        padding-right: 1rem;
+      }
+  
+    }
+
+    .nav-colored{
+        background-color: #000000;
+        @include responed(small-tablet){
+          background-color: transparent;
+        }
+        
+      }
+      .nav-transparent{
+        background-color: transparent;
+      }
+////////////////////////////header
+///////////////////////////////////////////////
+
+.header{
+    background-image: linear-gradient(90deg,rgba(#000,0.2),rgba(#000,0.2)), url("../img/Header.jpg");
+    &__container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 19rem;
+     flex-direction: column;
+        
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding-bottom: 10rem;
+        @include responed(phone){
+          
+           font-size: 2.5rem;
+        }
+       
+    }
+    &__headline{
+        text-align: center;
+        width: 60%;
+        @include responed(phone){
+            font-size: 2.2rem;
+            width: 90%;
+            
+        }
+        &-big{
+            font-size: 3.5rem;
+            display: inline-block;
+            font-weight: 700;
+            @include responed(phone){
+                font-size: 2.2rem;
+                
+            }
+        }
+        &-color{
+            color:var(--color-primary-light)
+        }
+    }
+    &__img{
+   
+        padding-right: 1.5rem;
+
+
+
+    }
+    &__span{
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-left: 2rem;
+    }
+
+    &__imges{
+        width:100%;
+        display: flex;
+        
+        height: 100%;
+
+       
+        
+    }
+    &__imge{
+        width: 100%;
+        display: none;
+        height: 100%;
+
+        
+        
+        
+    }
+}
+
+
+
+/////////////////////////////////////btn
+//////////////////////////////////btn-small
+
+.btn-small:link,
+.btn-small:visited{
+    font-weight: 400s;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color:var(--color-yellow);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-yellow);
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    margin-top: 4rem;
+    transition: all .2s;
+    align-self: center;
+    
+
+}
+
+.btn-small:hover{
+    transform: translateY(-3px) ;
+}
+
+.btn-small:active{
+    transform: translateY(1px) ;
+}
+
+.btn-big,
+.btn-big:link,
+.btn-big:visited{
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color:#fff;
+    background-color: var(--color-primary);
+    border-radius: 1rem;
+    display: inline-block;
+    padding:.9rem 4.5rem;
+    margin-bottom: 2rem;
+  
+    font-family: 'Source Sans Pro', sans-serif;
+  
+
+    transition: all .2s;
+    
+    
+    
+
+}
+.btn-big:hover{
+    transform: translateY(-3px);
+}
+.btn-big:active{
+    transform: translateY(1px);
+}
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////heading
+.headline{
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    @include responed(tablet-port){
+       font-size: 3rem;
+    }
+    @include responed(phone){
+        
+       font-size: 2.5rem;
+    }
+  }
+  .prag{
+      display: inline-block;
+      font-weight: 400;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 3rem;
+      width: 60%;
+      text-align: center;
+      margin-bottom: 8rem;
+      @include responed(tablet-port){
+        font-size: 2.5rem;
+        width: 90%;
+    }
+    @include responed(phone){
+        
+       font-size: 2rem;
+       width:80%;
+    }
+
+  }
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////services
+
+.service{
+    
+
+    &__categories{
+        display: flex;
+        font-family: 'Source Sans Pro', sans-serif;
+        justify-content: center;
+        @include responed(tablet-landscape){
+            flex-direction: column;
+            align-items: center;
+            
+          
+            
+        }
+       
+        
+    }
+    &__categorie{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       background-color: #fff;
+     
+       border-radius: 1rem;
+       border:1px solid var(--color-grey-light);
+       width: 25%;
+       box-shadow: 1rem 1rem 3rem rgba(0,0,0,.3);
+       flex:0 1 22%;
+       &:not(:last-of-type){
+           margin-right: 4rem;
+       }
+       @include responed(tablet-landscape){
+       
+        margin-bottom: 4rem;
+        width: 33%;
+        &:not(:last-of-type){
+            margin-right: 0rem;
+        }
+        
+      
+        
+    }
+    @include responed(740px){
+        width: 45%;
+        
+    }
+    @include responed(phone){
+        width: 65%;
+        
+    }
+       
+       
+        &-icon{
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+            
+        }
+        &-headline{
+            color: var(--color-grey-light);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-primary);
+        }
+        &-prag{
+            font-size: 1.8rem;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 2rem;
+            line-height: 150%;
+            
+            margin-bottom: 6rem;
+          
+        }
+        &-prag-ar{
+            text-align: end;
+        }
+    }
+
+
+}
+
+//////////////////////////////////////////////////
+///////////////////////////////////////////
+//////////////////////////////////////////////////work
+
+.work{
+    &__container{
+        display: flex;
+        
+        align-items: center;
+        width: 100%;
+        background-position: center;;
+        padding:2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    &__img{
+        height: 25rem;
+        box-shadow: 0rem 1rem 3rem rgba(0,0,0,.3);
+        flex-shrink: 1;
+        width: 30rem;
+        margin-bottom: 3rem;
+     margin-right: 2rem;
+      @include responed(phone){
+       margin-right: 0;
+      }
+    }
+    &__big-2{
+        width: 35%;
+       
+       
+        order: 1;
+       
+       
+    }
+    &__big-3{
+        width: 35%;
+    
+        order: 2;
+        
+       
+        
+    }
+    &__small-1{
+        width: 5%;
+       
+        order: 0;
+        margin-left:10rem;
+      
+     
+    }
+    &__small-4{
+        width: 5%;
+        
+        order: 3;
+        margin-right:10rem;
+        
+      
+    }
+    &__plane{
+        background-image: url(../img/our-work-small.jpg);
+        background-position: center;
+        background-size: cover;
+       @include responed(phone){
+         
+       }
+
+    }
+    &__cargo{
+        background-image: url(../img/our-work-small-2.jpg);
+        background-position: center;
+        background-size: cover;
+        @include responed(phone){
+        
+        }
+ 
+
+    }
+    &__truck{
+        background-image: url(../img/truck1.jpg);
+        background-position: center;
+        background-size: cover;
+        
+
+    }
+    &__truck2{
+        background-image: url(../img/truck2.jpg);
+        background-size: cover;
+       background-position: bottom;
+       
+        
+
+    }
+   
+}
+
+
+
+
+
+//////////////////////////////////////request
+
+.request{
+    &__form{
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 1;
+        width:40%;
+        align-items: stretch;
+        @include responed(tablet-port){
+           
+            width: 60%;
+        }
+        @include responed(phone){
+           
+           width:80%
+        }
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        
+        color: var(--color-grey-light);
+    }
+    &__label-ar{
+        align-items: flex-end;
+    }
+
+    &__input{
+        margin-top:1rem;
+        width:100%;
+        height: 4rem;
+        font-size: 2rem;
+        border-radius: 4px;
+        border: 1px var(--color-grey-light) solid;
+        align-self: stretch;
+        box-shadow: 1rem 1rem 3rem rgba(0,0,0,.15);
+    }
+
+    &__select{
+        width: 30%;
+        margin-top: 1rem;
+        height: 4rem;
+        border: 1px var(--color-grey-light) solid;
+        box-shadow: 1rem 1rem 3rem rgba(0,0,0,.15);
+        border-radius: 7px;
+       padding-left: 2rem;
+        font-size: 2rem;
+        
+
+    } 
+    &__option{
+        margin-right: 10px;
+    }
+
+    &__textarea{
+        margin-top: 2rem;
+        box-shadow: 1rem 1rem 3rem rgba(0,0,0,.15);
+        height: 30rem;
+        align-self: stretch;
+
+
+    }
+    &__btn{
+        margin-top: 9rem;
+        border: none;
+        width: 70%;
+        height: 6rem;
+        margin:0 auto;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        cursor: pointer;
+        @include responed(tablet-port){
+           
+            font-size: 2rem;
+        }
+
+    }
+}
+
+
+/////////////////////////////////////////////contact
+
+.contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+   
+    
+
+    @include responed(tablet-port){
+        width: 40%;
+    }
+    @include responed(phone){
+        margin-top: 20rem;
+        width: 100%;
+        flex-direction: column;
+        height: 40%;
+        // flex-wrap: wrap;
+        padding-left: 4rem;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    height: 100%;
+    
+    
+    
+    &__img{
+        position: absolute;
+
+       
+        
+        top: 0;
+        right: 0;
+        width: 2rem;
+        @include responed(tablet-landscape){
+            width: 2rem;
+        }
+        @include responed(phone){
+            display:none;
+        }
+    }
+    &__headline{
+        font-size: 2.5rem;
+        margin-bottom: 6rem;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        @include responed(phone){
+
+           margin-bottom: 2rem;
+           margin-left: 0;
+           padding-right: 3rem;
+        }
+       
+       
+    }
+ 
+    &__phone{
+        display: flex;
+        
+        align-items: center;
+        margin-right: 2rem;
+        margin-bottom: 7rem;
+        padding-left: 1rem;
+        @include responed(phone){
+            margin-bottom: 2rem;
+            padding-left: 0;
+        }
+    }
+    &__phone-img{
+        @include responed(tablet-landscape){
+            width: 5rem;
+            height: 5rem;
+        }
+        @include responed(phone){
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &__phone-num{
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 200%;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        
+    }
+    &__location{
+        display: flex;
+        
+        align-items: center;
+        margin-left: 1rem;
+        @include responed(phone){
+           margin-left: 0;
+        }
+
+    }
+    &__location-text{
+        font-size: 1.3rem;
+        font-weight: 700;
+        display: inline-block;
+        width: 70%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        @include responed(phone){
+           width: 50%;
+           padding-left: 1rem;
+           padding-right: 0;
+           
+        }
+       
+    }
+    &__location-img{
+        @include responed(tablet-landscape){
+            width: 5rem;
+            height: 5rem;
+        }
+        @include responed(phone){
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.header{
+    width: 100%;
+   
+    
+    background-size: cover;
+   background-position: center;
+    color: #fff;
+    position: relative;
+    animation: header 10s infinite;
+    overflow: hidden;
+    @include responed(phone){
+        background-position: right;
+        
+        
+
+    }
+
+}
+
+////////////////////////////////animation
+
+
+
+.service{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.work{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.request{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.section-contact{
+    margin-top: 4rem;
+    width: 70%;
+    margin:0 auto;
+    display: flex;
+    margin-bottom: 8rem;
+    justify-content: flex-end;
+    height: 50rem;
+    background-image: linear-gradient(90deg,transparent 0%,transparent 70%,#ffffff 70%,#ffffff 100%),url('../img/contact.jpg');
+    background-position: 20% 70%;
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,.3);
+   
+    background-size: cover;
+    position: relative;
+    @include responed(tablet-port){
+        background-image: linear-gradient(90deg,transparent 0%,transparent 60%,#ffffff 60%,#ffffff 100%),url('../img/contact.jpg');
+    }
+    @include responed(phone){
+           
+        background-image: linear-gradient(180deg,transparent 0%,transparent 50%,#ffffff 50%,#ffffff 100%),url('../img/contact.jpg');
+        flex-direction: column;
+        justify-content: center;;
+        
+        align-items: flex-start;
+        height: 70rem;
+        background-position:bottom;
+        width: 80%;
+    }
+}

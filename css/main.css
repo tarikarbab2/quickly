@@ -572,7 +572,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem; }
+  margin-top: 0rem; }
 
 .work {
   width: 100%;
@@ -616,3 +616,6 @@ body {
       height: 70rem;
       background-position: bottom;
       width: 80%; } }
+
+.emty {
+  margin-bottom: 8rem; }
